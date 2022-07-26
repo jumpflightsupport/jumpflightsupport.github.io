@@ -175,6 +175,7 @@ input.other-button {
 #submit-button {
     display: block;
     width: calc(100% - 10px);
+    height: 30px;
     margin-left: 5px;
     margin-right: 5px;
 }
@@ -184,5 +185,9 @@ input.other-button {
         text-align: left;
         padding-left: 10px;
         width: calc(100% - 10px);
+    }
+
+    h7.split-box-title {
+        font-size: .8em;
     }
 }

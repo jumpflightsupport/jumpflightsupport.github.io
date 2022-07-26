@@ -6,6 +6,7 @@ function SubmitButtonClicked(id) {
 
     form.submit();
 
+    alert("Report Submitted");
     // Reset all data other than the name
     form.reset();
     nameInput.value = savedName;
