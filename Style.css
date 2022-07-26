@@ -1,6 +1,20 @@
 * {
     margin: 0px;
     padding: 0px;
+    font-family: Roboto;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+h1 {
+    display: block;
+    font-weight: 500;
+    margin-top: 4px;
+
+}
+
+h6 {
+    display: inline;
 }
 
 button {
@@ -10,11 +24,20 @@ button {
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
-    background-color: rgb(221, 177, 249);
+    background-color: rgb(247, 195, 195);
 }
 
 button:hover {
-    background-color: rgb(228, 204, 242);
+    background-color: rgb(248, 220, 220);
+}
+
+body {
+    background-color: rgb(248, 220, 220);
+}
+
+.split-box-title {
+    display: block;
+    text-align: center;
 }
 
 .system-button {
@@ -32,34 +55,39 @@ button:hover {
     max-width: 480px;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgb(227, 215, 251);
+    background-color: rgb(255, 237, 237);
+    z-index: 1;
 }
 
 .question-box {
     display: inline-block;
-    width: calc(100% - 20px);
+    width: calc(100% - 30px);
     height: fit-content;
     background-color: rgb(255, 255, 255);
-    margin: 5px 5px 5px 5px;
+    margin: 5px 10px 5px 10px;
     border-radius: 6px;
     padding: 5px;
-    box-shadow: 2px 3px 5px rgba(0, 0, 0, .2);
+    box-shadow: -2px 3px 5px rgba(0, 0, 0, .2);
 }
 
 .split-box {
     display: inline-block;
-    width: calc(50% - 22px);
+    width: calc(50% - 30px);
 }
 
 .header-box {
     display: block;
+    position: relative;
     height: 50px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgb(221, 177, 249);
+    background-color: rgb(246, 181, 181);
     text-align: center;
     padding-top: 5px;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, .2);
+    z-index: 2;
+    font-size: 2em;
 }
 
 /* Dropdown Button */
@@ -140,7 +168,7 @@ input.time-input {
     width: 75%;
     height: fit-content;
     font-size: 1.5em;
-    margin-top: 10px;
+    margin-top: 6px;
 }
 
 input.other-button {
@@ -158,6 +186,7 @@ input.other-button {
     right: 0px;
     margin: 0px;
     border-radius: 0px;
+    z-index: 9;
 }
 
 #name {
@@ -174,10 +203,12 @@ input.other-button {
 
 #submit-button {
     display: block;
-    width: calc(100% - 10px);
+    width: calc(100% - 20px);
     height: 30px;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 6px;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, .2);
 }
 
 @media only screen and (max-width: 480px) {
@@ -185,9 +216,5 @@ input.other-button {
         text-align: left;
         padding-left: 10px;
         width: calc(100% - 10px);
-    }
-
-    h7.split-box-title {
-        font-size: 1em;
     }
 }

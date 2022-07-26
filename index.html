@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
     <base target="_self">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="Script.js"></script>
@@ -25,7 +31,7 @@
         </div>
     
         <div class="question-box">
-            <h7 for="break">When did it break?</h7>
+            <h6 for="break">When did it break?</h6>
             
             <!--BreakTime Special Buttons-->
             <button class="time-button" type="button" onclick="currentTimeButtonClicked('break')">Current Time</button>
@@ -35,7 +41,7 @@
         </div>
     
         <div class="question-box split-box">
-            <h7 class="split-box-title">What system went down?</h7><br>
+            <h6 class="split-box-title">What system went down?</h6>
             
             <div id="system-buttons">
                 <button class="system-button" type="button" id="bay1" onclick="systemButtonClicked(this, 'system')">Bay 1</button>
@@ -46,7 +52,7 @@
             
             <input class="other-button" type="text" id="system" name="entry.1901621244" required>
         </div><div class="question-box split-box">
-            <h7 class="split-box-title">Who did you escalate to?</h7><br>
+            <h6 class="split-box-title">Who did you escalate to?</h6>
 
             <div id="system-buttons">
                 <button class="system-button" type="button" id="mod" onclick="systemButtonClicked(this, 'escalate')">MOD</button>
@@ -59,17 +65,17 @@
         </div>
     
         <div class="question-box">
-            <label for="what">What happened?</label><br>
+            <h6>What happened?</h6>
             <input type="text" id="what" name="entry.1097126073" required>
         </div>
     
         <div class="question-box">
-            <label for="how">How did you fix it?</label><br>
+            <h6>How did you fix it?</h6>
             <input type="text" id="how" name="entry.1833245586" required>
         </div>
     
         <div class="question-box">
-            <h7 for="fix">What time did you fix it?</label><h7>
+            <h6>What time did you fix it?</label><h6>
             
             <!--FixTime Special Buttons-->
             <button class="time-button" type="button" onclick="currentTimeButtonClicked('fix')">Current Time</button>
