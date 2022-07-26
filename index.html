@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_self">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="Script.js"></script>
+    <link rel="stylesheet" href="Style.css"></link>
+  </head>
+
+  <meta name="viewport" content="width=device-
+  width, initial-scale=1">
+
+  <body>
+    <div class="header-box">
+        <h1>Damage Report</h1>
+    </div>
+
+    <!--This I-Frame hides the google confirmation response-->
+    <iframe name="formSubmitFrame" name="formSubmitFrame" tile="Holds Submitted form data" style="position: absolute;width:0;height:0;border:0;"></iframe>
+
+    <form id="form" class="form-body" target="formSubmitFrame" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScGLJcONl-x4qYf1sL8O9u-c4WfOMIZMW50nsuvPjhYlx0Prw/formResponse" method="POST">
+        <div id="name-box" class="question-box">
+            <label class="question-box-title" for="name">Name:</label>
+            <input type="text" id="name" name="entry.766459316" required>
+        </div>
+    
+        <div class="question-box">
+            <h7 for="break">When did it break?</h7>
+            
+            <!--BreakTime Special Buttons-->
+            <button class="time-button" type="button" onclick="currentTimeButtonClicked('break')">Current Time</button>
+            
+            <!--Break Time input box-->
+            <input class="time-input" type="time" id ="break" name="entry.113575741" value="now" required>
+        </div>
+    
+        <div class="question-box split-box">
+            <h7 for="system">What system went down?<h7><br>
+            
+            <div id="system-buttons">
+                <button class="system-button" type="button" id="bay1" onclick="systemButtonClicked(this, 'system')">Bay 1</button>
+                <button class="system-button" type="button" id="bay2" onclick="systemButtonClicked(this, 'system')">Bay 2</button>
+                <button class="system-button" type="button" id="both" onclick="systemButtonClicked(this, 'system')">Both Bays</button>
+                <button class="system-button" type="button" id="aetherkey" onclick="systemButtonClicked(this, 'system')">Aetherkey</button>
+            </div>
+            
+            <input class="other-button" type="text" id="system" name="entry.1901621244" required>
+        </div>
+
+        <div class="question-box split-box">
+            <h7 for="escalate">Who did you escalate to?</h7><br>
+
+            <div id="system-buttons">
+                <button class="system-button" type="button" id="mod" onclick="systemButtonClicked(this, 'escalate')">MOD</button>
+                <button class="system-button" type="button" id="tech" onclick="systemButtonClicked(this, 'escalate')">Technician</button>
+                <button class="system-button" type="button" id="dev" onclick="systemButtonClicked(this, 'escalate')">Developer</button>
+                <button class="system-button" type="button" id="tait" onclick="systemButtonClicked(this, 'escalate')">TAIT</button>
+            </div>
+
+            <input class="other-button" type="text" id="escalate" name="entry.1297606792" required>
+        </div>
+    
+        <div class="question-box">
+            <label for="what">What happened?</label><br>
+            <input type="text" id="what" name="entry.1097126073" required>
+        </div>
+    
+        <div class="question-box">
+            <label for="how">How did you fix it?</label><br>
+            <input type="text" id="how" name="entry.1833245586" required>
+        </div>
+    
+        <div class="question-box">
+            <h7 for="fix">What time did you fix it?</label><h7>
+            
+            <!--FixTime Special Buttons-->
+            <button class="time-button" type="button" onclick="currentTimeButtonClicked('fix')">Current Time</button>
+            
+            <!--BreakTime Input Box-->
+            <input class="time-input" type='time' id="fix" name="entry.885497428" value='now' required/>
+        </div>
+    
+        <div>
+            <button id="submit-button" type="button" onclick="SubmitButtonClicked('form')">Submit Report</button>
+        </div>
+    </form>
+  </body>
+</html>
