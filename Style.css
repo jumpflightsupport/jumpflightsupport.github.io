@@ -39,8 +39,6 @@ button:hover {
     display: inline-block;
     width: calc(100% - 20px);
     height: fit-content;
-    margin-left: auto;
-    margin-right: auto;
     background-color: rgb(255, 255, 255);
     margin: 5px 5px 5px 5px;
     border-radius: 6px;
@@ -51,6 +49,7 @@ button:hover {
 .split-box {
     display: inline-block;
     width: calc(50% - 22px);
+    white-space: nowrap;
 }
 
 .header-box {
