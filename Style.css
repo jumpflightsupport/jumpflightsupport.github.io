@@ -139,8 +139,8 @@ input.time-input {
     position: relative;
     width: 75%;
     height: fit-content;
-    font-size: 2em;
-    margin-top: 4px;
+    font-size: 1.5em;
+    margin-top: 10px;
 }
 
 input.other-button {
