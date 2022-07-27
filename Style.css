@@ -37,6 +37,33 @@ body {
     background-color: rgb(248, 220, 220);
 }
 
+input {
+    display: block;
+    width: calc(100% - 5px);
+    height: fit-content;
+    background-color: rgb(255, 251, 240);
+}
+
+input.empty {
+    background-color: rgb(255, 190, 111);
+}
+
+/* inputs containing time formatting */
+input.time-input {
+    display: block;
+    position: relative;
+    width: 75%;
+    height: fit-content;
+    font-size: 1.5em;
+    margin-top: 6px;
+}
+
+input.other-button {
+    display: block;
+    width: calc(100% - 4px);
+    margin-top: 5px;
+}
+
 .split-box-title {
     display: block;
     text-align: center;
@@ -64,18 +91,23 @@ body {
 
 .question-box {
     display: inline-block;
-    width: calc(100% - 30px);
+    box-sizing: border-box;
+    width: calc(100% - 20px);
     height: fit-content;
     background-color: rgb(255, 255, 255);
     margin: 5px 10px 5px 10px;
     border-radius: 6px;
     padding: 5px;
     box-shadow: -2px 3px 5px rgba(0, 0, 0, .2);
+    border: rgb(0, 0, 0);
+    border-style: outset;
+    border-width: .5px;
+    border-color: #c7a9a9;
 }
 
 .split-box {
     display: inline-block;
-    width: calc(50% - 30px);
+    width: calc(50% - 20px);
 }
 
 .header-box {
@@ -85,7 +117,7 @@ body {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgb(246, 181, 181);
+    background-color: rgb(247, 195, 195);
     text-align: center;
     padding-top: 5px;
     box-shadow: 2px 3px 5px rgba(0, 0, 0, .2), 0px -8px 18px rgba(101, 30, 30, .2) inset;
@@ -157,32 +189,10 @@ container when the user clicks on the dropdown button) */
     position: relative;
 }
 
-input {
-    display: block;
-    width: calc(100% - 5px);
-    height: fit-content;
-    background-color: rgb(246, 249, 255);
-}
-
-/* inputs containing time formatting */
-input.time-input {
-    display: block;
-    position: relative;
-    width: 75%;
-    height: fit-content;
-    font-size: 1.5em;
-    margin-top: 6px;
-}
-
-input.other-button {
-    display: block;
-    width: calc(100% - 4px);
-    margin-top: 5px;
-}
-
 /* Style for the name box in the top of the form */
 #name-box {
     display: block;
+    box-sizing: unset;
     position: absolute;
     height: 46px;
     width: 80px;
@@ -209,16 +219,27 @@ input.other-button {
     display: block;
     width: calc(100% - 20px);
     height: 40px;
+    margin-top: 5px;
     margin-left: 10px;
     margin-right: 10px;
     border-radius: 6px;
     box-shadow: 2px 3px 5px rgba(0, 0, 0, .2), 0px -6px 15px rgba(101, 30, 30, .2) inset;;
 }
 
-@media only screen and (max-width: 480px) {
+#zanes-phone-fix {
+    display: none;
+}
+
+@media screen and (max-width: 480px) {
     .header-box {
         text-align: left;
         padding-left: 10px;
         width: calc(100% - 10px);
+    }
+}
+
+@media screen and (min-width: 411px) and (max-width: 422px) {
+    #zanes-phone-fix {
+        display: inline;
     }
 }

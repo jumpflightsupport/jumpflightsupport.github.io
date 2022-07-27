@@ -4,13 +4,65 @@ function SubmitButtonClicked(id) {
 
     var savedName = nameInput.value;
 
-    form.submit();
+    // Validate all input fields are filled
+    var inputs = getFormInputs(form);
+    var failedInputs = checkInputsFilled(inputs);
+    if (failedInputs.length === 0) {
+        // Submit the form
+        form.submit();
+        alert("Report Submitted");
 
-    alert("Report Submitted");
-    // Reset all data other than the name
-    form.reset();
-    nameInput.value = savedName;
+        // Reset all data other than the name
+        form.reset();
+        resetAllFields(inputs);
+        nameInput.value = savedName;
+    }
+    else {
+        alert("Submission Failed, fill out all required fields");
+        resetAllFields(inputs);
+        highlightEmptyFields(failedInputs);
+    }
 };
+
+function checkInputsFilled(inputs) {
+    var failed = [];
+    for (i = 0; i < inputs.length; i++) {
+        if (inputs[i].value === "") {
+            failed.push(inputs[i]);
+        }
+    }
+
+    return failed;
+}
+
+function getFormInputs(form) {
+    var elems = Array.from(form.elements);
+    var inputs = [];
+
+    for (i = 0; i < elems.length; i++) {
+        if (isInput(elems[i])) {
+            inputs.push(elems[i]);
+        }
+    }
+
+    return inputs;
+}
+
+function isInput(elem) {
+    return elem.tagName.toLowerCase() === "input";
+}
+
+function highlightEmptyFields(fields) {
+    for (i = 0; i < fields.length; i++) {
+        fields[i].classList.add("empty");
+    }
+}
+
+function resetAllFields(fields) {
+    for (i = 0; i < fields.length; i++) {
+        fields[i].classList.remove("empty");
+    }
+}
 
 /* When the user clicks on the system button, 
 it inputs the field into the input box */
