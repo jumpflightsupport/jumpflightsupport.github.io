@@ -44,6 +44,8 @@ input {
     background-color: rgb(255, 251, 240);
 }
 
+/* turn inputs orange if the submit button was pressed
+and they are also empty */
 input.empty {
     background-color: rgb(255, 190, 111);
 }
@@ -199,7 +201,7 @@ container when the user clicks on the dropdown button) */
     top: 0px;
     right: 0px;
     margin: 0px;
-    border-radius: 0px;
+    border-radius: 0px 0px 0px 3px;
     z-index: 9;
 }
 
