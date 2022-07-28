@@ -66,7 +66,7 @@ function resetAllFields(fields) {
 
 /* When the user clicks on the system button, 
 it inputs the field into the input box */
-function systemButtonClicked(elem, parent_id) {
+function buttonClicked(elem, parent_id) {
     var systemInput = document.getElementById(parent_id);
     var btnDict = { "bay1": "Bay 1",
                     "bay2": "Bay 2",
@@ -75,7 +75,10 @@ function systemButtonClicked(elem, parent_id) {
                     "mod": "MOD",
                     "tech": "Technician",
                     "dev": "Developer",
-                    "tait": "TAIT" };
+                    "tait": "TAIT" ,
+                    "rplayer": 'I pressed "Reset Current Player" on Hangar Manager',
+                    "rjump": 'I pressed "Reset Jump" on the Atlas',
+                    "rbogie": 'I pressed "Reset Bogie" on the Atlas'};
 
     systemInput.value = btnDict[elem.id];
 }

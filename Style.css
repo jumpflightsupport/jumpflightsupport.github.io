@@ -37,6 +37,13 @@ body {
     background-color: rgb(248, 220, 220);
 }
 
+textarea {
+    resize: none;
+    width: calc(100% - 5px);
+    height: fit-content;
+    background-color: rgb(255, 251, 240)
+}
+
 input {
     display: block;
     width: calc(100% - 5px);
@@ -77,6 +84,13 @@ input.other-button {
     height: 40px;
     width: 48%;
     margin: 1%;
+}
+
+.fix-button {
+    height: 30px;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .form-body {
@@ -230,6 +244,14 @@ container when the user clicks on the dropdown button) */
 
 #zanes-phone-fix {
     display: none;
+}
+
+@media screen and (max-width: 400px) {
+    .fix-button {
+        width: calc(33% - 2px);
+        box-sizing: border-box;
+        font-size: .8em;
+    }
 }
 
 @media screen and (max-width: 480px) {

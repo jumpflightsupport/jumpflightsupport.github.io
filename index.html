@@ -44,10 +44,10 @@
             <h6 class="split-box-title">What system went down?</h6>
             
             <div id="system-buttons">
-                <button class="system-button" type="button" id="bay1" onclick="systemButtonClicked(this, 'system')">Bay 1</button>
-                <button class="system-button" type="button" id="bay2" onclick="systemButtonClicked(this, 'system')">Bay 2</button>
-                <button class="system-button" type="button" id="both" onclick="systemButtonClicked(this, 'system')">Both Bays</button>
-                <button class="system-button" type="button" id="aetherkey" onclick="systemButtonClicked(this, 'system')">Aether Key</button>
+                <button class="system-button" type="button" id="bay1" onclick="buttonClicked(this, 'system')">Bay 1</button>
+                <button class="system-button" type="button" id="bay2" onclick="buttonClicked(this, 'system')">Bay 2</button>
+                <button class="system-button" type="button" id="both" onclick="buttonClicked(this, 'system')">Both Bays</button>
+                <button class="system-button" type="button" id="aetherkey" onclick="buttonClicked(this, 'system')">Aether Key</button>
             </div>
             
             <input class="other-button" type="text" id="system" name="entry.1901621244" required>
@@ -55,10 +55,10 @@
             <h6 class="split-box-title">Who did you escalate to?</h6><br id="zanes-phone-fix">
 
             <div id="system-buttons">
-                <button class="system-button" type="button" id="mod" onclick="systemButtonClicked(this, 'escalate')">MOD</button>
-                <button class="system-button" type="button" id="tech" onclick="systemButtonClicked(this, 'escalate')">Tech</button>
-                <button class="system-button" type="button" id="dev" onclick="systemButtonClicked(this, 'escalate')">Dev</button>
-                <button class="system-button" type="button" id="tait" onclick="systemButtonClicked(this, 'escalate')">TAIT</button>
+                <button class="system-button" type="button" id="mod" onclick="buttonClicked(this, 'escalate')">MOD</button>
+                <button class="system-button" type="button" id="tech" onclick="buttonClicked(this, 'escalate')">Tech</button>
+                <button class="system-button" type="button" id="dev" onclick="buttonClicked(this, 'escalate')">Dev</button>
+                <button class="system-button" type="button" id="tait" onclick="buttonClicked(this, 'escalate')">TAIT</button>
             </div>
 
             <input class="other-button" type="text" id="escalate" name="entry.1297606792" value="None" required>
@@ -66,12 +66,15 @@
     
         <div class="question-box">
             <h6>What happened?</h6>
-            <input type="text" id="what" name="entry.1097126073" required>
+            <input class="open-answer" type="text" id="what" name="entry.1097126073" required>
         </div>
     
         <div class="question-box">
-            <h6>How did you fix it?</h6>
-            <input type="text" id="how" name="entry.1833245586" required>
+            <h6>How did you fix it?</h6><br>
+            <button class="fix-button" type="button" id="rplayer" onclick="buttonClicked(this, 'how')">Reset Player</button>
+            <button class="fix-button" type="button" id="rjump" onclick="buttonClicked(this, 'how')">Reset Jump</button>
+            <button class="fix-button" type="button" id="rbogie" onclick="buttonClicked(this, 'how')">Reset Bogie</button>
+            <input class="open-answer" type="text" id="how" name="entry.1833245586" required>
         </div>
     
         <div class="question-box">
