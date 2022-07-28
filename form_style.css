@@ -20,7 +20,7 @@ h6 {
 button {
 	color: inherit;
     border-width: .5px;
-	padding: 0;
+	padding: 5px;
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
@@ -35,13 +35,6 @@ button:hover {
 
 body {
     background-color: rgb(248, 220, 220);
-}
-
-textarea {
-    resize: none;
-    width: calc(100% - 5px);
-    height: fit-content;
-    background-color: rgb(255, 251, 240)
 }
 
 input {
@@ -204,6 +197,16 @@ container when the user clicks on the dropdown button) */
     height: 60px;
     float: right;
     position: relative;
+}
+
+.login-box {
+    display: block;
+    box-sizing: border-box;
+    height: 150px;
+    width: calc(60% - 20px);
+    margin-top: calc(50%);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Style for the name box in the top of the form */

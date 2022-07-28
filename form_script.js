@@ -1,3 +1,28 @@
+var correctPassword = "makethejump";
+
+// Load these functions when the page loads
+window.onload = function() {
+    // Set a listener for the password input pressing enter
+    var passwordInput = document.getElementById("password");
+    if (passwordInput) {
+        passwordInput.addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                // prevent the default function
+                event.preventDefault();
+                // submit password
+                passwordSubmitted();
+            }
+        });
+    }
+
+    // Set name to username when new window loads
+    var name = document.getElementById("name");
+    if (name) {
+        var username = localStorage.getItem("username");
+        name.value = username;
+    }
+}
+
 function SubmitButtonClicked(id) {
     var form = document.getElementById(id);
     var nameInput = document.getElementById("name");
@@ -18,11 +43,27 @@ function SubmitButtonClicked(id) {
         nameInput.value = savedName;
     }
     else {
-        alert("Submission Failed, fill out all required fields");
+        alert("Submission Failed: fill out all required fields");
         resetAllFields(inputs);
         highlightEmptyFields(failedInputs);
     }
 };
+
+function passwordSubmitted(){
+    var password = document.getElementById("password").value;
+    var name = document.getElementById("username");
+
+    if (password === correctPassword) {
+        // password is correct, save username to post in name field
+        localStorage.setItem("username", name.value);
+        // move to form page
+        location.href = "index.html";
+    }
+    else {
+        // alert incorrect password
+        alert("Incorrect Password");
+    }
+}
 
 function checkInputsFilled(inputs) {
     var failed = [];
