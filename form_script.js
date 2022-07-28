@@ -57,7 +57,7 @@ function passwordSubmitted(){
         // password is correct, save username to post in name field
         localStorage.setItem("username", name.value);
         // move to form page
-        location.href = "index.html";
+        location.href = "form.html";
     }
     else {
         // alert incorrect password
