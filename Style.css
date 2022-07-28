@@ -88,7 +88,8 @@ input.other-button {
 
 .fix-button {
     height: 30px;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
+    margin-top: 4px;
     padding-left: 5px;
     padding-right: 5px;
 }
@@ -246,6 +247,7 @@ container when the user clicks on the dropdown button) */
     display: none;
 }
 
+/* make fix buttons fill the page below 400 px */
 @media screen and (max-width: 400px) {
     .fix-button {
         width: calc(33% - 2px);
@@ -254,6 +256,7 @@ container when the user clicks on the dropdown button) */
     }
 }
 
+/* make the header snap to the top left when under 480 px */
 @media screen and (max-width: 480px) {
     .header-box {
         text-align: left;
@@ -262,6 +265,8 @@ container when the user clicks on the dropdown button) */
     }
 }
 
+/* fix the system/escalate questions to stay the same height between
+411px and 422px */
 @media screen and (min-width: 411px) and (max-width: 422px) {
     #zanes-phone-fix {
         display: inline;
