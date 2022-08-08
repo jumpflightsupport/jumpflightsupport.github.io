@@ -1,4 +1,4 @@
-var correctPassword = "makethejump";
+var correctPassword = "3b51316c23a206fdb1e9808670613ee54922d1e1da6ab433b3e85ba62eb581cf";
 
 // Load these functions when the page loads
 window.onload = function() {
@@ -53,16 +53,19 @@ function passwordSubmitted(){
     var password = document.getElementById("password").value;
     var name = document.getElementById("username");
 
-    if (password === correctPassword) {
-        // password is correct, save username to post in name field
-        localStorage.setItem("username", name.value);
-        // move to form page
-        location.href = "form.html";
-    }
-    else {
-        // alert incorrect password
-        alert("Incorrect Password");
-    }
+        // digest code and display
+    digestString(password).then((hash) => {
+        if (hash === correctPassword) {
+            // password is correct, save username to post in name field
+            localStorage.setItem("username", name.value);
+            // move to form page
+            location.href = "form.html";
+        }
+        else {
+            // alert incorrect password
+            alert("Incorrect Password");
+        }
+    });
 }
 
 function checkInputsFilled(inputs) {
@@ -202,6 +205,21 @@ window.onclick = function(event) {
             }
         }
     }
+}
+
+async function digestString(string) {
+    const salt = "%)JUMP#@%DFJKL:ASOIPE@#$*&(_!&#HKP!JSJF_*!$!@#KJSD(!@";
+    string = string + salt;
+    //encode string
+    const data = new TextEncoder().encode(string);
+    //digest encoded string into a hash
+    const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+    //convert hash into a array
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    //convert array into a hex code
+    const hashHex = hashArray.map((b) => b.toString(16).padStart(2, '0')).join('');
+
+    return hashHex;
 }
 
 // Time input code
