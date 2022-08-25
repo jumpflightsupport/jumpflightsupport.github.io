@@ -120,7 +120,7 @@ function buttonClicked(elem, parent_id) {
                     "tech": "Technician",
                     "dev": "Developer",
                     "tait": "TAIT" ,
-                    "rplayer": 'I pressed "Reset Current Player" on Hangar Manager',
+                    "rplayer": 'I pressed "Restart" on Hangar Manager',
                     "rjump": 'I pressed "Reset Jump" on the Atlas',
                     "rbogie": 'I pressed "Reset Bogie" on the Atlas'};
 
